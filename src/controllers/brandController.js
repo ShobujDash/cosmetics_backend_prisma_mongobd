@@ -35,7 +35,7 @@ export const createBrand = async (req, res) => {
     }
 
     // Get the uploaded file path
-    const brandImage = req.file ? req.file.path : null;
+    const brandImage = req.file ? req.file.filename : null;
 
     // Create the brand
     const newBrand = await prisma.brand.create({
