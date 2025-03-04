@@ -73,7 +73,7 @@ export const createCategory = async (req, res) => {
     }
 
     // Get the uploaded file path
-    const image = req.file ? req.file.path : null;
+    const image = req.file ? req.file.filename : null;
 
     // Create the category
     const newCategory = await prisma.category.create({
